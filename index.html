@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polio Patrol | Mission to Save the Motor Neurons</title>
+  <style>
+    :root { --navy:#18264f; --blue:#426de5; --aqua:#e5f8fb; --mint:#d6f8e8; --yellow:#ffdb72; --bg:#f6f8ff; --ink:#213154; }
+    * {box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.55}
+    header{background:linear-gradient(110deg,#202d69,#426de5);color:white;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    header strong{font-size:1.2rem} header small{color:#e4eaff} nav a{color:white;margin-left:18px;text-decoration:none;font-weight:650}
+    main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+    .hero{background:linear-gradient(125deg,#d9e7ff,#e4faf0);border-radius:25px;padding:42px 35px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center}
+    .eyebrow{font-weight:800;letter-spacing:.12em;color:#385ba9;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1;margin:12px 0} h2{font-size:1.65rem;margin:0 0 12px} p{margin:10px 0 20px}
+    button,.button{display:inline-block;border:0;border-radius:14px;background:var(--blue);color:white;padding:13px 20px;font:inherit;font-weight:750;cursor:pointer;text-decoration:none}
+    button:hover,.button:hover{background:#294fc6}button:focus-visible,a:focus-visible{outline:3px solid #ef9800;outline-offset:3px}
+    .illustration{font-size:6rem;text-align:center;filter:drop-shadow(0 10px 10px #7284b63b)}
+    section{margin-top:36px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card,.quiz{background:white;border:1px solid #e2e7f7;border-radius:20px;padding:24px;box-shadow:0 6px 22px #1c356210}
+    .card .emoji{font-size:2.2rem} .card h3{margin:9px 0 5px} .card p{font-size:.96rem;margin:0 0 9px}
+    .tag{display:inline-block;background:#eff3ff;color:#3055b4;border-radius:99px;padding:5px 12px;font-size:.8rem;font-weight:800}
+    .quiz{max-width:780px} .answers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+    .answer{background:#f3f6ff;color:var(--navy);border:2px solid #dfe6fa;text-align:left;font-weight:600} .answer:hover{background:#e5edff}
+    .answer:disabled{cursor:default;opacity:1}.correct{background:#d9f7e6!important;border-color:#1a9861!important}.incorrect{background:#ffe0df!important;border-color:#cf4747!important}
+    #feedback{font-weight:700;min-height:30px} footer{text-align:center;color:#526182;padding:26px;font-size:.9rem}
+    @media(max-width:700px){.hero{grid-template-columns:1fr;padding:26px}.illustration{font-size:4.5rem}.cards{grid-template-columns:1fr}.answers{grid-template-columns:1fr} nav a{margin-left:0;margin-right:15px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>🧬 Polio Patrol</strong><br><small>Junior Scientist Lab</small></div>
+    <nav aria-label="Main navigation"><a href="#missions">Missions</a><a href="#challenge">Quick Challenge</a></nav>
+  </header>
+  <main>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Your science adventure starts here</div>
+        <h1>Mission: Save the Motor Neurons!</h1>
+        <p>Become a cell detective! Explore how poliovirus can affect nerve cells, how cells work together in tissues, and why muscles need messages from the nervous system.</p>
+        <a class="button" href="#missions">Explore the Missions →</a>
+      </div>
+      <div class="illustration" role="img" aria-label="Microscope and DNA symbols">🔬🧬</div>
+    </div>
+    <section id="missions">
+      <span class="tag">About 15 minutes • Grades 7–8</span>
+      <h2 style="margin-top:12px">Your mission map</h2>
+      <div class="cards">
+        <article class="card"><div class="emoji">🦠</div><h3>1. Meet the Virus</h3><p>Learn what poliovirus is and how it enters the body.</p><span class="tag">Coming soon</span></article>
+        <article class="card"><div class="emoji">🔬</div><h3>2. Cell Detective</h3><p>Explore the nucleus, membrane, mitochondria, and cytoplasm.</p><span class="tag">Coming soon</span></article>
+        <article class="card"><div class="emoji">⚡</div><h3>3. Follow the Signal</h3><p>Discover how motor neurons send messages to muscles.</p><span class="tag">Coming soon</span></article>
+        <article class="card"><div class="emoji">🧩</div><h3>4. Tissue Trouble</h3><p>Connect cells, tissues, organs, and body systems.</p><span class="tag">Coming soon</span></article>
+        <article class="card"><div class="emoji">🛡️</div><h3>5. Protect the Body</h3><p>Explore how vaccines help prevent polio.</p><span class="tag">Coming soon</span></article>
+        <article class="card"><div class="emoji">🏆</div><h3>6. Final Challenge</h3><p>Test your science detective skills!</p><a href="#challenge">Try a sample question ↓</a></article>
+      </div>
+    </section>
+    <section id="challenge" class="quiz" aria-labelledby="quiz-heading">
+      <span class="tag">Playable now!</span>
+      <h2 id="quiz-heading" style="margin-top:14px">⚡ Quick Challenge</h2>
+      <p><strong>Question:</strong> Which cells carry messages from the spinal cord to muscles to help control movement?</p>
+      <div class="answers" id="answers">
+        <button class="answer" data-correct="false">Red blood cells</button>
+        <button class="answer" data-correct="true">Motor neurons</button>
+        <button class="answer" data-correct="false">Skin cells</button>
+        <button class="answer" data-correct="false">Bone cells</button>
+      </div>
+      <p id="feedback" aria-live="polite">Choose an answer to check your knowledge.</p>
+      <button id="retry" hidden>Try Again ↻</button>
+    </section>
+    <section class="card"><h2>🔎 Science fact</h2><p>Polio is caused by poliovirus. Most infections do <strong>not</strong> cause paralysis, but in some cases the virus damages motor neurons. Without normal signals from these nerve cells, muscles may become weak or paralyzed. Vaccination helps prevent polio.</p></section>
+  </main>
+  <footer>Polio Patrol • An educational project for Grades 7–8 • No login required</footer>
+  <script>
+    const answers = document.querySelectorAll('.answer');
+    const feedback = document.querySelector('#feedback');
+    const retry = document.querySelector('#retry');
+    answers.forEach(btn => btn.addEventListener('click', () => {
+      const correct = btn.dataset.correct === 'true';
+      answers.forEach(b => {b.disabled = true; if(b.dataset.correct === 'true') b.classList.add('correct');});
+      if (!correct) btn.classList.add('incorrect');
+      feedback.textContent = correct ? '✅ Correct! Motor neurons carry movement signals to muscles.' : 'Not quite! Motor neurons are the correct answer. They send signals that help muscles move.';
+      retry.hidden = false;
+    }));
+    retry.addEventListener('click', () => {
+      answers.forEach(b => {b.disabled = false;b.classList.remove('correct','incorrect');});
+      feedback.textContent = 'Choose an answer to check your knowledge.';
+      retry.hidden = true;
+    });
+  </script>
+</body>
+</html>
